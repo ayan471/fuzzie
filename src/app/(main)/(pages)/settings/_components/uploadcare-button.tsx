@@ -28,6 +28,10 @@ const UploadCareButton = ({ onUpload }: Props) => {
     );
   }, []);
 
+  if (!ctxProviderRef.current) {
+    return null;
+  }
+
   return (
     <div>
       <lr-config ctx-name="my-uploader" pubkey="601550acf436d5cdded6" />
